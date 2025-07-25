@@ -13,3 +13,12 @@ def driver():
     driver.get(BASE_URL)
     yield driver
     driver.quit()
+    
+class TestCreatePost:
+    def test_create_post_unauthorized(self, driver):
+        driver.find_element(*CLoc.POST_BTN).click()
+
+        modal_title = WebDriverWait(driver, 10).until(
+            expected_conditions.visibility_of_element_located(CLoc.MODAL_AUTH_HEADER))
+
+        assert "Чтобы разместить объявление, авторизуйтесь" in modal_title.text
