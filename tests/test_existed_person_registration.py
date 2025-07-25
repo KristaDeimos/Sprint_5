@@ -1,4 +1,12 @@
-def test_registration_existing_user(self):
+import pytest
+from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+from faker import Faker
+from locators import RegistrationLocators as Loc
+from urls import BASE_URL
+
+def test_existed_person_registration(self):
         fake = Faker()
         email = fake.email()
         password = fake.password()
