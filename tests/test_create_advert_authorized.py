@@ -7,7 +7,6 @@ from locators import RegistrationLocators as RLoc, CreatePostLocators as CLoc
 from urls import BASE_URL
 from tests.test_data import TEST_USER_EMAIL, TEST_USER_PASSWORD
 
-@pytest.fixture
 
 class TestCreatePost:
     def test_create_post_authorized(self, driver):
