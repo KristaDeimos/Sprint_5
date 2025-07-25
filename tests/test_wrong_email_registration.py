@@ -6,7 +6,7 @@ from faker import Faker
 from locators import RegistrationLocators as Loc
 from urls import BASE_URL
 
- def test_registration_invalid_email(self):
+ def test_wrong_email_registration(self):
         self.driver.find_element(*Loc.LOGIN_BTN).click()
         self.driver.find_element(*Loc.NO_ACCOUNT_BTN).click()
         self.driver.find_element(*Loc.EMAIL_INPUT).send_keys("***")
