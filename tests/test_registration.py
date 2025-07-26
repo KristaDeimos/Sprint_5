@@ -10,11 +10,9 @@ class TestRegistration:
     def setup_method(self):
         self.driver = webdriver.Chrome()
         self.driver.get(BASE_URL)
-
-    def teardown_method(self):
         self.driver.quit()
 
-    def test_registration(self):
+    def test_registration(self, driver):
         fake = Faker()
         new_email = fake.email()
         password = fake.password()
