@@ -10,8 +10,6 @@ class TestRegistration:
     def setup_method(self):
         self.driver = webdriver.Chrome()
         self.driver.get(BASE_URL)
-
-    def teardown_method(self):
         self.driver.quit()
 
 def test_existed_person_registration(self):
