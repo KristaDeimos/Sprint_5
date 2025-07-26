@@ -10,11 +10,9 @@ class TestLogin:
     def setup_method(self):
         self.driver = webdriver.Chrome()
         self.driver.get(BASE_URL)
-
-    def teardown_method(self):
         self.driver.quit()
 
-    def test_valid_login(self):
+    def test_valid_login(self, driver):
         fake = Faker()
         email = fake.email()
         password = fake.password()
