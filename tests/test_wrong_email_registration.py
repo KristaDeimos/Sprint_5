@@ -10,11 +10,9 @@ class TestRegistration:
     def setup_method(self):
         self.driver = webdriver.Chrome()
         self.driver.get(BASE_URL)
-
-    def teardown_method(self):
         self.driver.quit()
 
- def test_wrong_email_registration(self):
+ def test_wrong_email_registration(self, driver):
         self.driver.find_element(*Loc.LOGIN_BTN).click()
         self.driver.find_element(*Loc.NO_ACCOUNT_BTN).click()
         self.driver.find_element(*Loc.EMAIL_INPUT).send_keys("***")
