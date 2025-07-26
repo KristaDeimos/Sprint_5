@@ -12,7 +12,7 @@ class TestLogout:
         self.driver.get(BASE_URL)
         self.driver.quit()
 
-    def test_user_logout(self, driver):
+    def test_user_logout(self):
         fake = Faker()
         email = fake.email()
         password = fake.password()
