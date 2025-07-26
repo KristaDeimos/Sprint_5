@@ -12,7 +12,7 @@ class TestRegistration:
         self.driver.get(BASE_URL)
         self.driver.quit()
 
- def test_wrong_email_registration(self, driver):
+ def test_wrong_email_registration(self):
         self.driver.find_element(*Loc.LOGIN_BTN).click()
         self.driver.find_element(*Loc.NO_ACCOUNT_BTN).click()
         self.driver.find_element(*Loc.EMAIL_INPUT).send_keys("***")
