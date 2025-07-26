@@ -12,7 +12,7 @@ class TestRegistration:
         self.driver.get(BASE_URL)
         self.driver.quit()
 
-    def test_registration(self, driver):
+    def test_registration(self):
         fake = Faker()
         new_email = fake.email()
         password = fake.password()
