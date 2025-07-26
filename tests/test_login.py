@@ -12,7 +12,7 @@ class TestLogin:
         self.driver.get(BASE_URL)
         self.driver.quit()
 
-    def test_valid_login(self, driver):
+    def test_valid_login(self):
         fake = Faker()
         email = fake.email()
         password = fake.password()
