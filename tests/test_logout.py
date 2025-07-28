@@ -7,12 +7,7 @@ from locators import RegistrationLocators as Loc
 from urls import BASE_URL
 
 class TestLogout:
-    def setup_method(self):
-        self.driver = webdriver.Chrome()
-        self.driver.get(BASE_URL)
-        self.driver.quit()
-
-    def test_user_logout(self):
+    def test_user_logout(self, driver):
         fake = Faker()
         email = fake.email()
         password = fake.password()
